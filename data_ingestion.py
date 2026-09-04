@@ -25,7 +25,10 @@ def get_asset_info(ticker_symbol: str) -> dict:
             "shortName", "symbol", "sector", "industry", "previousClose", 
             "open", "dayLow", "dayHigh", "regularMarketPreviousClose", 
             "marketCap", "volume", "averageVolume", "fiftyTwoWeekLow", 
-            "fiftyTwoWeekHigh", "trailingPE", "forwardPE", "dividendYield"
+            "fiftyTwoWeekHigh", "trailingPE", "forwardPE", "dividendYield",
+            "beta", "trailingPegRatio", "shortRatio", "fiftyDayAverage", 
+            "twoHundredDayAverage", "priceToBook", "debtToEquity", "returnOnEquity",
+            "freeCashflow", "operatingMargins", "revenueGrowth", "earningsGrowth"
         ]
         return {k: info.get(k, "N/A") for k in keys_to_keep}
     except Exception as e:
